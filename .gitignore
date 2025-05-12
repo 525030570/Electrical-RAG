@@ -1,0 +1,15 @@
+# 忽略所有 .log 文件
+*.log
+
+# 忽略特定目录（如 build/ 和 dist/）
+/output/
+/dist/
+
+# 忽略特定文件
+test.ipynb
+
+# 忽略所有文件夹下的 node_modules
+**/node_modules/
+
+# 排除例外：不忽略 lib/ 目录下的 file.txt
+!/lib/file.txt
