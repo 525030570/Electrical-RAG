@@ -16,6 +16,37 @@
 10. 本地部署：数据不离开本地，保障信息安全
 11. 支持本地Qwen3系列模型推理模式的开启与关闭
 
+
+### 项目结构
+![alt text](rag-frame.png)
+```
+Electrical RAG
+├─ .env
+├─ build_knowledge_repository  # 构建知识库
+│  ├─ clean_document.py
+│  ├─ create_db.py
+│  ├─ file_read.py
+│  ├─ md_process.py
+│  ├─ minerU.py
+│  └─ upload_file.py
+├─ File                        # 文件上传
+│  ├─ .DS_Store
+│  ├─ Structured
+│  └─ Unstructured
+├─ html_string.py
+├─ images
+├─ main.py
+├─ RAG_CHAT                    # RAG交互
+│  ├─ chat.py
+│  ├─ HybridRetriever.py
+│  ├─ local_model.py
+│  ├─ online_model.py
+│  └─ query_reform.py
+├─ README.md
+├─ requirements.txt
+└─ VectorStore                 # 向量数据库
+```
+
 ## 项目背景
 
 本项目来源于本人作为一位一线电力工人的真实需求。一线的工作繁杂而又琐碎，上级单位繁杂众多，九龙治水。各种培训资料、政策宣贯、安全规定、规章制度数不胜数，导致各种PPT、word、PDF文档堆积如山，过目即忘。在工作中遇到需要查阅资料时根本无从下手如大海捞针。遂想借用AI大模型的RAG技术将配电一线工作中需要用到的知识整合起来形成一个配电领域的专业知识库，在遇到工作上对政策不清晰，记忆模糊时可随时向大模型提问，以解燃眉之急。
@@ -46,34 +77,7 @@ Qwen2.5-0.5B完全没有这方面的知识，答案完全是胡编乱造的。Qw
 
 ## 项目展示
 
-### 项目结构
-```
-Electrical RAG
-├─ .env
-├─ build_knowledge_repository  # 构建知识库
-│  ├─ clean_document.py
-│  ├─ create_db.py
-│  ├─ file_read.py
-│  ├─ md_process.py
-│  ├─ minerU.py
-│  └─ upload_file.py
-├─ File                        # 文件上传
-│  ├─ .DS_Store
-│  ├─ Structured
-│  └─ Unstructured
-├─ html_string.py
-├─ images
-├─ main.py
-├─ RAG_CHAT                    # RAG交互
-│  ├─ chat.py
-│  ├─ HybridRetriever.py
-│  ├─ local_model.py
-│  ├─ online_model.py
-│  └─ query_reform.py
-├─ README.md
-├─ requirements.txt
-└─ VectorStore                 # 向量数据库
-```
+
 ### 项目效果
 
 文件上传
